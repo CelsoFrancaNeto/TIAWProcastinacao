@@ -1,0 +1,134 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Cabecalho */
+
+.item_menu
+{
+  color: red;
+  border: 100px;
+}
+.logo
+{
+  width: 100px;
+}
+.ml-auto .nav-link
+{
+  margin-right: 35px;
+  margin-left: 35px;
+ 
+}
+#botao
+{
+  margin-bottom: 100px;
+
+}
+/* Fim Cabecalho */
+
+/* Conteúdo */
+
+.conteudo
+{
+  min-width: 100%;
+  padding: 0;
+ 
+}
+.featurette
+{
+  padding: 0px;
+  margin: 0px;
+}
+.featurette p, .featurette h2, .featurette h5, .featurette img
+{
+  margin: 20px;
+}
+.featurette img
+{
+  border: none;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+.botao_veja_mais
+{
+  text-align: center;
+}
+.conteudo button
+{
+  margin: 5px;
+}
+.conteudo
+{
+  margin-top: 50px;
+}
+.enunciador
+{
+  text-align: center;
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+}
+
+.cardvideos_desktop, .cardvideos_mobile
+{
+  background-color: #343a40;  
+}
+.area_cardvideos
+{ 
+  margin: 0;
+  min-width: 100%;
+  background-color: #343a40;
+  padding-top: 5px;
+  padding-bottom: 30px;
+}
+.featurette02
+{
+  padding: 15px;
+}
+.enunciador02
+{
+  background-color: white;
+  text-align: center;
+  padding: 15px;
+}
+.botoes_agenda
+{
+  padding: 10px;
+  text-align: center;
+}
+.tabelaimg
+{
+  display: block;
+  margin: auto;
+  padding: auto;
+  max-width: 100%;
+  padding-bottom: 50px;
+}
+
+/* Fim Conteúdo */
+
+
+/* Rodapé */
+footer
+{
+  background-color: #3b3b3b;
+  min-width: 100%;
+
+}
+footer h5
+{
+  margin-top: 10px;
+}
+/* Fim Rodapé */
+
+.MultiCarousel { float: left; overflow: hidden; margin: 0 ;  ; width: 100%; position:relative; }
+    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+        .MultiCarousel .MultiCarousel-inner .item { float: left;}
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; margin-right: 15px; margin-left: 15px;}
+    .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
+    .MultiCarousel .leftLst { left:0; }
+    .MultiCarousel .rightLst { right:0; }
+    
+        .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
