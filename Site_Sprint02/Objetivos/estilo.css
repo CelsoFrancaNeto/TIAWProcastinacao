@@ -1,0 +1,68 @@
+﻿
+html
+{
+	overflow: hidden;
+	max-width: 100%;
+}
+body{
+	font-family:Tahoma;
+	min-width: 100%;
+}
+
+ul{
+	list-style:none;
+}
+
+ul label{
+	width:100px;
+	float:left;
+}
+
+#frmCadastro{
+	padding-top: 50px;
+}
+
+#tblListar{
+
+	font-family: arial;
+	max-width: 100%;
+	background-color: transparent;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+  	margin-bottom: 20px;
+
+}
+
+#tblListar tbody tr{
+	background-color: #fafafa;
+	
+}
+
+#tblListar  th
+{
+	
+	background: #eeeeee;
+	vertical-align: bottom;
+	padding: 10px;
+	
+}
+td
+{
+	font-weight: normal;
+	font-size: 12px;
+	padding: 8px 15px;
+	line-height: 20px;
+	text-align: left;
+	vertical-align: middle;
+	border: 1px solid #dddddd;
+}
+@media (max-width: 480px) {
+
+	.p{
+		display: none;
+		
+	
+	}
+
+}

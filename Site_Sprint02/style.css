@@ -4,7 +4,11 @@ html, body {
 }
 
 /* Cabecalho */
-
+.nomeusuario
+{
+  font-size: smaller;
+  color: white;
+}
 .item_menu
 {
   color: red;
@@ -258,5 +262,4 @@ footer h5
     .MultiCarousel .rightLst { right:0; }
     
         .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
-
 

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+    id="bootstrap-css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Do it Now!</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- fullCalendar -->
+  <link rel="stylesheet" href="../plugins/fullcalendar/main.min.css">
+  <link rel="stylesheet" href="../plugins/fullcalendar-daygrid/main.min.css">
+  <link rel="stylesheet" href="../plugins/fullcalendar-timegrid/main.min.css">
+  <link rel="stylesheet" href="../plugins/fullcalendar-bootstrap/main.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <script src="java/script.js"></script>
+  <script src="login.js"></script>
+
+  <title>Do it Now!</title>
+  <script>
+    // Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
+    if (!usuarioCorrente.login) {
+      window.location.href = LOGIN_URL;
+    }
+
+    function exibeUsuarios() {
+
+      // Popula a tabela com os registros do banco de dados
+      let listaUsuarios = '';
+      for (i = 0; i < db_usuarios.usuarios.length; i++) {
+        let usuario = db_usuarios.usuarios[i];
+        listaUsuarios += `<tr><td scope="row">${usuario.nome}</td><td>${usuario.login}</td><td>${usuario.email}</td></tr>`;
+      }
+
+      // Substitui as linhas do corpo da tabela
+      document.getElementById("table-usuarios").innerHTML = listaUsuarios
+
+    }
+
+    function initPage() {
+
+      // Associa a função de logout ao botão
+      document.getElementById('btn_logout').addEventListener('click', logoutUser);
+
+      // Informa o nome do usuário logado
+      document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.login;
+
+
+      // Lista os usuários 
+      exibeUsuarios();
+    }
+
+    // Associa ao evento de carga da página a função para verificar se o usuário está logado
+    window.addEventListener('load', initPage);
+  </script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a href="HomePage.html"><img class="logo" src="img/LOGO.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item item_menu">
+              <a href="HomePage.html"><button type="button" class="btn btn-dark">Home</button></a>
+            </li>
+
+            <li class="btn-group">
+              <button style="text-align: left;" type="button" class="btn btn-dark dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Outras seções
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="HomePage.html#artigos">Artigos</a>
+                <a class="dropdown-item" href="HomePage.html#videos">Vídeos</a>
+                <a class="dropdown-item" href="HomePage.html#dicas">Dicas</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="SobrenosPage.html"><button type="button" class="btn btn-dark">Sobre nós</button></a>
+            </li>
+            <li class="btn-group">
+              <button style="text-align: left;" type="button" class="btn btn-dark dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Oi, <span id="nomeUsuario"></span>
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-smile" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                  <path fill-rule="evenodd"
+                    d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683z" />
+                  <path
+                    d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
+                </svg>
+
+              </button>
+              <div class="dropdown-menu">
+                <a id="btn_logout" class="dropdown-item" href="#videos">Sair</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="container conteudo">
+      <div class="row">
+
+        <div class="col-12 enunciador">
+          <h2>Agenda</h2>
+        </div>
+
+      </div>
+
+      
+        <div " class="row">
+          <object type="text/html" data="pages/calendar.html" width="1600" height="950"></object>
+        </div>
+        <div class="row">
+          <div class="col-12 enunciador">
+            <h2>Objetivos</h2>
+          </div>
+          <object type="text/html" data="Objetivos/index.html" width="1600" height="900"></object>
+        </div>
+
+      </div>
+   
+
+  </main>
+
+  <footer class="container text-light">
+    <div class="row">
+      <div class="col-md-3 col-lg-4 col-xl-3">
+        <h5>Sobre</h5>
+        <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+        <p class="mb-0">
+          Somos uma equipe que busca ajudar pessoas a cumprir seus objetivos, sejam eles estudar para alguma
+          prova/concurso importante ou promover algum projeto pessoal, lutando contra a procrastinação que tanto as
+          atrapalha no seu desenvolvimento.
+        </p>
+      </div>
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+        <h5>Colaboradores</h5>
+        <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+        <ul class="list-unstyled">
+          <li>Celso França</li>
+          <li>Lucas Arcanjo</li>
+          <li>Link 3</li>
+          <li>Link 4</li>
+        </ul>
+      </div>
+
+
+      <div class="col-md-4 col-lg-3 col-xl-3">
+        <h5>Contato</h5>
+        <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+        <ul class="list-unstyled">
+          <li><i class="fa fa-envelope mr-2"></i> doitnow@gmail.com</li>
+          <li><i class="fa fa-phone mr-2"></i> +55 (31) 3214-1503</li>
+          <li><i class="fa fa-print mr-2"></i> +55 (31) 3444-0909</li>
+        </ul>
+      </div>
+      <div class="col-12 copyright mt-3">
+        <p class="float-left">
+          <a href="#"><button type="button" class="btn btn-info">Volte ao Topo!</button></a>
+        </p>
+        <p class="text-right text-muted">©Copyright - 2020 Do it Now! Ltda </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+<!-- Navigation 
+  </header>
+</body>
+</html>
