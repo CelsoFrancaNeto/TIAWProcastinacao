@@ -1,6 +1,6 @@
 $(function () {
 
-	var operacao = "A"; 
+	var operacao = "A"; //"A"=Adição; "E"=Edição
 
 	var indice_selecionado = -1;
 
@@ -12,21 +12,21 @@ $(function () {
 		tbObjetivos = [];
 
 	function Adicionar() {
-		var cli = GetOBJ("Objetivo", $("#txtObjetivo").val());
+		var cli = GetCliente("Objetivo", $("#txtObjetivo").val());
 
 		if (cli != null) {
 			alert("Código já cadastrado.");
 			return;
 		}
 
-		var OBJ = JSON.stringify({
+		var cliente = JSON.stringify({
 			Objetivo: $("#txtObjetivo").val(),
 			Porque: $("#txtPorque").val(),
 			Data: $("#txtData").val(),
 			Status: $("#txtStatus").val()
 		});
 
-		tbObjetivos.push(OBJ);
+		tbObjetivos.push(cliente);
 
 		localStorage.setItem("tbObjetivos", JSON.stringify(tbObjetivos));
 
@@ -82,7 +82,7 @@ $(function () {
 		alert("Objetivo excluído.");
 	}
 
-	function GetOBJ(propriedade, valor) {
+	function GetCliente(propriedade, valor) {
 		var cli = null;
 		for (var item in tbObjetivos) {
 			var i = JSON.parse(tbObjetivos[item]);

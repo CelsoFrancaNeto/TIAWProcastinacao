@@ -54,52 +54,56 @@
   <!-- Navigation -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a  href="index.html"><img class="logo" src="img/LOGO.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item item_menu">
-                      <a href="index.html"><button type="button" class="btn btn-dark">Home</button></a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="AgendaPage.html"><button type="button" class="btn btn-dark">Agenda</button></a>
-                    </li>
-                    <li class="btn-group">
-                        <button style="text-align: left;" type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Outras seções
-                        </button>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="index.html#videos">Vídeos</a>
-                        <a class="dropdown-item" href="index.html#dicas">Dicas</a>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <a href="SobreNosPage.html"><button type="button" class="btn btn-dark">Sobre nós</button></a>
-                    </li>
-                    <li class="btn-group">
-                        <button style="text-align: left;" type="button" class="btn btn-dark dropdown-toggle"
-                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Oi, <span id="nomeUsuario"></span>
-                          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-smile" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path fill-rule="evenodd" d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683z"/>
-                            <path d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
-                          </svg>
-                          
-                        </button>
-                        <div class="dropdown-menu">
-                          <a id="btn_logout" class="dropdown-item" href="#videos">Sair</a>
-                        </div>
-                      </li>
-                </ul>
-            </div>
-            <div>
-            </div>
+      <div class="container">
+        <a href="index.html"><img class="logo" src="img/LOGO.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="AgendaPage.html"><button type="button" class="btn btn-dark">Agenda</button></a>
+            </li>
+            <li class="btn-group">
+              <button style="text-align: left;" type="button" class="btn btn-dark dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Outras seções
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="index.html#videos">Artigos</a>
+                <a class="dropdown-item" href="index.html#videos">Vídeos</a>
+                <a class="dropdown-item" href="index.html#dicas">Dicas</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="SobreNosPage.html"><button type="button" class="btn btn-dark">Sobre nós</button></a>
+            </li>
+            
+            
+            <li class="btn-group">
+              <button style="text-align: left;" type="button" class="btn btn-dark dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Oi, <span id="nomeUsuario"></span>
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-smile" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                  <path fill-rule="evenodd"
+                    d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683z" />
+                  <path
+                    d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
+                </svg>
+
+              </button>
+              <div class="dropdown-menu">
+                <a id="btn_logout" class="dropdown-item">Sair</a>
+              </div>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
+
   </header>
 
   <main>
@@ -110,7 +114,7 @@
             <h2>Artigos</h2>
         </div>
 
-        <div class="row featurette featurette02">
+        <div class="row featurette featurette02" id="first-text">
             <div class="col-md-7">
               <h2 class="featurette-heading">Procrastinação e terapia cognitivo-comportamental: uma revisão integrativa</h2>
               <h5>Resumo</h5>
@@ -125,7 +129,7 @@
 
         <hr class="featurette-divider">
 
-        <div class="row featurette">
+        <div class="row featurette" id="second-text">
             <div class="col-md-7 order-md-2">
               <h2 class="featurette-heading">Procrastinação acadêmica: um estudo exploratório.</h2>
               <h5>Resumo</h5>
@@ -142,7 +146,7 @@
 
         <hr class="featurette-divider">
 
-        <div class="row featurette">
+        <div class="row featurette" id="third-text">
             <div class="col-md-7">
               <h2 class="featurette-heading">A Arte de Procrastinar</h2>
               <h5>Resumo</h5>
@@ -175,50 +179,6 @@
 
         <hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading">Procrastinação acadêmica: um estudo exploratório.</h2>
-              <h5>Resumo</h5>
-              <p class="lead">A procrastinação acadêmica pode ser compreendida como um fenômeno dinâmico, que envolve aspectos pessoais, comportamentais e ambientais e se caracteriza pelo adiamento não estratégico de ações. Esse comportamento pode prejudicar o desempenho acadêmico estudante. O presente estudo objetivou explorar e descrever a procrastinação entre os estudantes universitários, bem como identificar as atividades mais e menos adiadas e os sentimentos relatados ao se procrastinar. Os resultados indicam a frequência da procrastinação entre os universitários, bem como uma relação de tarefas acadêmicas adiadas e de sentimentos desagradáveis ao procrastinar.</p>
-            </div>
-            <div class="col-md-5 order-md-1">
-              <img width="500" height="500" src="img/Post02.png" alt="">
-              <br>
-              <a href="#modal2" data-toggle="modal"><button type="button" class="btn btn-info">Leia mais</button></a>
-            </div>
-          </div>
-    
-
-        <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading">A Arte de Procrastinar</h2>
-              <h5>Resumo</h5>
-              <p class="lead">As empresas buscam a excelência, a eficácia e rapidez em seus colaboradores
-                visando resultados satisfatórios. A procrastinação consiste em atrasar ou adiar
-                sistematicamente a realização de atividades relevantes, podendo acontecer em situações e em
-                contextos variados (RIBEIRO ET AL., 2014). Diante disto, o presente estudo pretendeu
-                ampliar o conhecimento sobre o ato de procrastinar, buscando compreender quais os motivos
-                e consequências deste comportamento, na visão do colaborador e do gestor. Optou-se por uma
-                pesquisa quali-quanti, de caráter exploratório. Os resultados deixaram claro uma dificuldade
-                em gerir o tempo. Grande parte dos funcionários (48%) demonstraram sérios problemas para
-                administrar o tempo, e outros 36% possuem diversos pontos prejudiciais na administração do
-                tempo. Os resultados dos gestores, não se mostraram diferentes. O excesso de trabalho
-                aparece como principal causador da procrastinação. Junta-se a este, a “falta de tempo”,
-                seguida da necessidade de optar por atividades mais importantes, deixando outras de lado, e o
-                surgimento de novas tarefas. A maior consequência da procrastinação foi o acúmulo e
-                sobrecarga de trabalho, sendo esta uma consequência, que se liga fortemente ao motivo
-                trazido anteriormente. Este acúmulo leva a atrasos, esquecimentos e ao estresse. Todos
-                procrastinam em algum momento de suas vidas, portanto, aceitar que o deixar para depois
-                está mais presente do que se queira admitir é um primeiro passo, e buscar compreender este
-                processo, se faz necessário.</p>
-            </div>
-            <div class="col-md-5">
-              <img width="500" height="500" src="img/Post03.jpg" alt="">
-              <br>
-              <a href="#modal3" data-toggle="modal"><button" style="margin: 5px;" type="button" class="btn btn-info">Leia mais</button></a>
-            </div>
-        
-        </div>
     </div>
 
 
@@ -241,8 +201,8 @@
             <ul class="list-unstyled">
                 <li>Celso França</li>
                 <li>Lucas Arcanjo</li>
-                <li>Leonardo Fernandes</li>
-                <li>luiz Gustavo</li>
+                <li>Leonardo Ferreira</li>
+                <li>Luiz Gustavo</li>
                 <li>Gabriel Ribeiro</li>
             </ul>
         </div>
@@ -265,8 +225,8 @@
         </div>
       
     </div>
-</footer>
-<div class="portfolio-modal modal fade" id="modal1" tabindex="-1" role="dialog" aria-hidden="true">
+    </footer>
+    <div class="portfolio-modal modal fade" id="modal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -413,7 +373,7 @@
                 os critérios previamente estabelecidos. A Tabela 1 apresenta as
                 especificações de cada artigo, sendo os dois primeiros encontrados
                 no banco de dados PEPSIC, e os demais, no PsycINFO. <br> <br>
-                <img src="img/tab1.jpg" alt=""> <br> <br> 
+                <img src="/img/tab1.jpg" alt=""> <br> <br> 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A quantidade relativamente pequena de artigos sobre
                 procrastinação nos periódicos de abordagem cognitivocomportamental pode ser observada na Tabela 1 e revela uma
                 produção escassa sobre o tema, especialmente em nível nacional,
@@ -488,7 +448,7 @@
                 (Dryden & Sabelus, 2012), e por fim, um específico sobre validação
                 de instrumento (Fernie et al., 2009). As especificações  dos estudos
                 descritivos podem ser observadas na Tabela 2. <br> <br>
-                <img src="img/tab2.jpg" alt=""> <br> <br>
+                <img src="/img/tab2.jpg" alt=""> <br> <br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Observe na Tabela 2 que, em geral, a amostra dos
                 estudos descritivos foi composta por universitários, com
                 proporção relativamente equilibrada entre homens e mulheres.
@@ -557,7 +517,7 @@
                 As especificações dos seis estudos correlacionais encontrados
                 são apresentadas na Tabela 3 e descritos a seguir, considerando
                 a ordem cronológica e/ou aproximação dos conteúdos abordados. <br> <br>
-                <img src="img/tab3.jpg" alt=""> <br> <br>
+                <img src="/img/tab3.jpg" alt=""> <br> <br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Os estudos correlacionais, em comparação aos
                 descritivos, envolvem uma quantidade mais elevada de
                 participantes, o que viabiliza a condução das análises estatísticas
@@ -674,7 +634,7 @@
                 à procrastinação encontrados nessa revisão referente à
                 abordagem cognitivo-comportamental foram sistematizados
                 na Tabela 4. <br> <br>
-                <img src="img/tab4.jpg" alt=""> <br> <br>
+                <img src="/img/tab4.jpg" alt=""> <br> <br>
                 <b>CONSIDERAÇÕES FINAIS</b> <br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A revisão da literatura em TCC sobre procrastinação
                 apresentou coerência com pesquisas em outras áreas, em
@@ -1173,7 +1133,7 @@
                   como pode se observar no Tabela 1 a seguir. <br>
                   Tabela 1 <br>
                   Categorias dos tipos de atividades mais e menos adiadas.
-                  <img src="img/tabela.PNG" alt=""> <br> <br>
+                  <img src="/img/tabela.PNG" alt=""> <br> <br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primeiramente, são descritas as informações a respeito das atividades mais
                   adiadas e, na sequência, as menos adiadas. Para esta análise, não foi realizada
                   separação dos estudantes no grupo de procrastinadores e não-procrastinadores. <br>
@@ -1185,7 +1145,7 @@
                   tempo” e “Outros”, como pode ser observado na Tabela 2. <br>
                   Tabela 2. <br> 
                   Distribuição das tarefas mais adiadas pelos estudantes. <br>
-                  <img src="img/tabela2.PNG" alt=""> <br>
+                  <img src="/img/tabela2.PNG" alt=""> <br>
                   O n equivale ao número de estudantes respondentes <br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As atividades relacionadas à vida acadêmica foram mencionadas por
                   aproximadamente 65% dos estudantes, considerando o primeiro lugar. Os
@@ -1193,7 +1153,7 @@
                   observa na Tabela 3. <br>
                   Tabela 3. <br>
                   Distribuição dos Compromissos Acadêmicos mais citados. <br>
-                  <img class = "tabela3" src="img/tabela3.PNG" alt=""> <br>
+                  <img class = "tabela3" src="/img/tabela3.PNG" alt=""> <br>
                   * Os números (n) das atividades foram calculadas a partir da incidência de
                   atividades descritas e não pelo número de participantes. <br> <br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dentre as atividades acadêmicas citadas, o Estudo, os Trabalhos
@@ -1215,7 +1175,7 @@
                   destacaram-se os cuidados pessoais, como pode se notar na Tabela 4.  <br> <br>
                   Tabela 4. <br>
                   Distribuição das tarefas menos adiadas pelos estudantes <br> 
-                  <img src="img/Capturar4.PNG" alt=""> <br>
+                  <img src="/img/Capturar4.PNG" alt=""> <br>
                   O n equivale ao número de estudantes respondentes <br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Embora as categorias sejam as mesmas encontradas entre as atividades
                   mais adiadas, pontua-se que o conteúdo é diferente. Visto que, entre as
@@ -1783,7 +1743,7 @@
                     durante essas 24 horas. A qualidade do uso do tempo é que determinará se você será
                     produtivo ou improdutivo (BERG, 2013). Abaixo podemos ter uma visão clara da
                     administração do tempo das empresas participantes. <br/><br>
-                    <img src="img/artg1.PNG" alt=""> <br>
+                    <img src="/img/artg1.PNG" alt=""> <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Os resultados do Teste de Administração do Tempo nos levam a perceber uma
                     dificuldade clara em gerir o tempo. Quase a metade dos participantes (48%) demonstraram
                     sérios problemas para administrar o tempo, classificação esta que se enquadra na menor
@@ -1801,7 +1761,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Com o estudo buscou-se o resultado dos funcionários, e também dos gestores; quando
                     se pensa em procrastinar, a gestão do tempo também se relaciona e esta ligada a quem gere a
                     empresa. Abaixo se expõem os resultados dos testes dos gestores das empresas participantes: <br/> <br>
-                    <img src="img/artg2.PNG" alt="">  <br> <br>
+                    <img src="/img/artg2.PNG" alt="">  <br> <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;É possível perceber que, quando se fala em gerir tempo a dificuldade também está
                     presente na gestão das empresas. Metade dos participantes da pesquisa apresentam sérios
                     problemas na administração do tempo, e a outra metade demonstra ter diversos pontos
@@ -2051,13 +2011,42 @@
     </div>
   </div>
  
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+  <script>
+    const text = localStorage.getItem('@texto')
+
+    const newHTML = "<div>" + "</div>";
+
+    if(text === '1'){
+        document.getElementById('second-text').innerHTML = newHTML;
+        document.getElementById('third-text').innerHTML = newHTML;
+
+    }else if(text==='2'){
+        document.getElementById('first-text').innerHTML = newHTML;
+        document.getElementById('third-text').innerHTML = newHTML;
+    }else if(text === '3'){
+        document.getElementById('first-text').innerHTML = newHTML;
+        document.getElementById('second-text').innerHTML = newHTML;
+    }
+    else if(text === '13'){
+        document.getElementById('second-text').innerHTML = newHTML;
+    }
+    else if(text === '12'){
+      document.getElementById('third-text').innerHTML = newHTML;
+    }
+    else if(text === '23'){
+      document.getElementById('first-text').innerHTML = newHTML;
+    }
+    else if(text === '123'){
+  
+    }
+      
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
+   <!-- Navigation 
+  </header>
+</body>
+</html>

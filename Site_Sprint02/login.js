@@ -1,13 +1,14 @@
-
+// Página inicial de Login
 const LOGIN_URL = "login.html";
 
-
+// Objeto para o banco de dados de usuários baseado em JSON
 var db_usuarios = {};
 
-
+// Objeto para o usuário corrente
 var usuarioCorrente = {};
 
-
+// função para gerar códigos randômicos a serem utilizados como código de usuário
+// Fonte: https://stackoverflow.com/questions/105034/how-to-create-guid-uuid
 function generateUUID() { // Public Domain/MIT
     var d = new Date().getTime();//Timestamp
     var d2 = (performance && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
@@ -25,6 +26,7 @@ function generateUUID() { // Public Domain/MIT
 }
 
 
+// Dados de usuários para serem utilizados como carga inicial
 const dadosIniciais = {
     usuarios: [
         { "id": generateUUID (), "login": "admin", "senha": "123", "nome": "Administrador do Sistema", "email": "admin@abc.com"},
@@ -48,9 +50,7 @@ function initLoginApp () {
     // Verifica se existem dados já armazenados no localStorage
     if (!usuariosJSON) {  // Se NÃO há dados no localStorage
         
-        // Informa sobre localStorage vazio e e que serão carregados os dados iniciais
-        alert('Dados de usuários não encontrados no localStorage. \n -----> Fazendo carga inicial.');
-
+    
         // Copia os dados iniciais para o banco de dados 
         db_usuarios = dadosIniciais;
 
