@@ -22,8 +22,9 @@ $(function () {
 		var cliente = JSON.stringify({
 			Objetivo: $("#txtObjetivo").val(),
 			Porque: $("#txtPorque").val(),
-			Data: $("#txtData").val(),
-			Status: $("#txtStatus").val()
+			Status: $("#txtStatus").val(),
+			DataEntrega: $("#txtDataEntrega").val(),
+			DataFinal: $("#txtDataFinal").val()
 		});
 
 		tbObjetivos.push(cliente);
@@ -38,8 +39,9 @@ $(function () {
 		tbObjetivos[indice_selecionado] = JSON.stringify({
 			Objetivo: $("#txtObjetivo").val(),
 			Porque: $("#txtPorque").val(),
-			Data: $("#txtData").val(),
-			Status: $("#txtStatus").val()
+			Status: $("#txtStatus").val(),
+			DataEntrega: $("#txtDataEntrega").val(),
+			DataFinal: $("#txtDataFinal").val()
 		});
 		localStorage.setItem("tbObjetivos", JSON.stringify(tbObjetivos));
 		alert("Informações editadas.")
@@ -54,9 +56,10 @@ $(function () {
 			"	<tr>" +
 			"<th></th>" +
 			"	<th>Seus Objetivos</th>" +
-			"	<th>Para quê?</th>" +
-			"	<th>Data de inicio:</th>" +
-			"	<th>Status</th>" +
+			"	<th>Motivação</th>" +
+			"	<th>Estado atual</th>" +
+			"	<th>Data de Entrega</th>" +
+			"   <th>Data Final</th>" +
 			"	</tr>" +
 			"</thead>" +
 			"<tbody>" +
@@ -70,8 +73,9 @@ $(function () {
 				"	<td><img src='edit.png' alt='" + i + "' class='btnEditar'/><img src='delete.png' alt='" + i + "' class='btnExcluir'/></td>" +
 				"	<td>" + cli.Objetivo + "</td>" +
 				"	<td>" + cli.Porque + "</td>" +
-				"	<td>" + cli.Data + "</td>" +
 				"	<td>" + cli.Status + "</td>" +
+				"	<td>" + cli.DataEntrega + "</td>" +
+				"	<td>" + cli.DataFinal + "</td>" +
 				"</tr>");
 		}
 	}
@@ -107,8 +111,9 @@ $(function () {
 		var cli = JSON.parse(tbObjetivos[indice_selecionado]);
 		$("#txtObjetivo").val(cli.Objetivo);
 		$("#txtPorque").val(cli.Porque);
-		$("#txtData").val(cli.Data);
 		$("#txtStatus").val(cli.Status);
+		$("#txtDataEntrega").val(cli.DataEntrega);
+		$("#txtDataFinal").val(cli.DataFinal);
 		$("#txtObjetivo").attr("readonly", "readonly");
 		$("#txtPorque").focus();
 	});
